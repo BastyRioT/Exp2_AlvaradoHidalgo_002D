@@ -1,0 +1,63 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@700&display=swap" rel="stylesheet">
+
+<ion-header>
+  <ion-toolbar class="header" mode="ios">
+    <ion-buttons slot="start">
+      <ion-back-button class="botones1" text="Atrás">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title style="font-family: 'Baloo Tamma 2', cursive; font-size: x-large;">Datos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list #myList>
+    <ion-list-header>
+      <h1 style="text-align: center;">Registros</h1>
+    </ion-list-header>
+
+    <ion-list>
+      <ion-item-sliding *ngFor="let d of data">
+        <ion-item>
+          <ion-label text-wrap>
+            <h3>Usuario: {{d.user}}</h3>
+            <ion-text>
+              <p>Nombre: {{d.name}}</p>
+              <p>Correo: {{d.email}}</p>
+              <p>Contraseña: {{d.pass}}</p><br>
+            </ion-text>
+            <p>{{d.modified | date: 'short'}}</p>
+          </ion-label>
+        </ion-item>
+        <ion-item-options side="end">
+          <ion-item-option color="secondary" (click)="updateDatos(d)">Actualizar</ion-item-option>
+          <ion-item-option color="danger" (click)="deleteDatos(d)">Eliminar</ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-toolbar class="header">
+    <ion-buttons slot="start">
+      <ion-button id="changeText" routerLink="/inicio">
+        <ion-icon class="botones" slot="end" name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons>
+      <ion-button id="changeText" routerLink="/contenido">
+        <img class="img" src="/assets/logonav.png">
+      </ion-button>
+    </ion-buttons>
+
+
+    <ion-buttons slot="end">
+      <ion-button id="changeText" routerLink="/registro">
+        <ion-icon class="botones" slot="start" name="person-add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

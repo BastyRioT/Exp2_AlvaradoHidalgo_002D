@@ -1,0 +1,67 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@700&display=swap" rel="stylesheet">
+
+<ion-header>
+  <ion-toolbar class="header" mode="ios">
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon class="botones" slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="centerbaloo">Inicio
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <body class="body">
+    <br><br>
+    <h1 class="centerbaloo">Bienvenido a </h1><br>
+    <ion-img class="logo" src="/assets/logo.png"></ion-img>
+    <ion-img class="logos" src="/assets/logito.png"></ion-img>
+    <h4 class="centerbaloo">Haz click en el logo de nuestra app para comenzar <br> <br>
+      | <br> v
+    </h4>
+  </body>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="share-social"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button color="light" href="https://www.facebook.com/" target="_blank">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light" href="https://www.instagram.com/" target="_blank">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light" href="https://github.com/BastyRioT/Exp1_AlvaradoHidalgo_002D" target="_blank">
+        <ion-icon name="logo-github"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="header">
+    <ion-buttons slot="start">
+      <ion-button id="changeText" routerLink="/login">
+        <ion-icon class="botones" slot="end" name="person"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons>
+      <ion-button id="changeText" routerLink="/contenido">
+        <img class="img" src="/assets/logonav.png">
+      </ion-button>
+    </ion-buttons>
+
+
+    <ion-buttons slot="end">
+      <ion-button id="changeText" routerLink="/registro">
+        <ion-icon class="botones" slot="start" name="person-add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

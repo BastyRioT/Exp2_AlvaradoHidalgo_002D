@@ -1,0 +1,58 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@700&display=swap" rel="stylesheet">
+
+<ion-header>
+  <ion-toolbar class="header" mode="ios">
+    <ion-buttons slot="start">
+      <ion-back-button class="botones1" text="Atrás">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title style="font-family: 'Baloo Tamma 2', cursive;">Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <body class="body">
+    <form #formulario1="ngForm" (ngSubmit)="onSubmit()">
+      <ion-item>
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-input type="text" name="user" [ngModel]="loaddata.user" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" name="pass" [ngModel]="loaddata.pass" required></ion-input>
+      </ion-item>
+      <ion-button type="submit" [disabled]="formulario1.invalid" expand="block" routerLink="/inicio">
+        Iniciar sesión
+      </ion-button>
+    </form>
+    <p style="text-align: center;">
+      ¿No tienes una cuenta? <a style="text-align: center;" routerLink="/registro">Haz click aquí</a>
+    </p>
+  </body>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="header">
+    <ion-buttons slot="start">
+      <ion-button id="changeText" routerLink="/inicio">
+        <ion-icon class="botones" slot="end" name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons>
+      <ion-button id="changeText" routerLink="/contenido">
+        <img class="img" src="/assets/logonav.png">
+      </ion-button>
+    </ion-buttons>
+
+
+    <ion-buttons slot="end">
+      <ion-button id="changeText" routerLink="/datos">
+        <ion-icon class="botones" slot="start" name="cloud"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
